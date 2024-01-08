@@ -45,7 +45,7 @@
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
 
-\title{}
+\title{10.5.4-5}
 \author{EE23BTECH11033-killana jaswanth}
 \maketitle
 \newpage
@@ -55,62 +55,93 @@
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 \textbf{Question}:\\
-
 A small terrace at a football ground comprises of 15 steps each of which is 50
 m long and built of solid concrete.Each step has a rise of 1/4 m and a tread of
 1/2 m. Calculate the total volume of concrete required to build the terrace.
-[Hint: Volume of concrete required to build the first step=\[
-\text{{volume}}=1/4 \cdot 1/2 \cdot 50
-\]
-\textbf{solution} \[
-\text{{dimensions of any step}}= length \cdot breadth \cdot height
-\]
+[Hint: Volume of concrete required to build the first step=\begin{align}
+    \text{{volume}}=1/4 \cdot 1/2 \cdot 50 
+\end{align}
+\textbf{solution} 
+\begin{align}
+\text{{dimensions of any step}}= length\cdot breadth\cdot height
+\end{align}
 \\length of first step is l 
 \\breadth of first step is b
-\\height of first step = h.
+\\height of first step is h.
+\\
+\\\begin{tabular}{|c|c| }
+\hline
+\textbf{parameter}& \textbf{value}
+\\\hline
+\multirow{3}{1em}\\\l&$50m$
+\\b&$0.5m$
+\\h&$0.25m$
+\\\hline
+\end{tabular}
 \begin{align}
-    l&=50m\\
-    b&=0.25m\\
-    h&=0.5m
-    \end{align}=
-\[
-\text{{dimensions of first step}} = 50m \cdot 0.25m \cdot 0.5m 
-\]
-\\=volume of first step is 6.25 cubicmeters
+\text{{dimensions of first step}} = 50m \cdot 0.25m \cdot 0.5m
+\end{align}
+\\=volume of first step is 6.25$m^3$
 \\=All the dimensions except height are same for all 15 steps .
 \\=The height difference between any 2 consecutive steps is 0.25 m.
 \\=so, the height of the second step is 0.25m+0.25m=0.5m
-\\=So, the volume of the second step is 50m*5m*0.5m= 12.5 cubicmeters
-\\=in the similar way the volume of the third step is 18.75 cubicmeters
+\\=So, the volume of the second step is 50m*5m*0.5m= 12.5$m^3$
+\\=in the similar way the volume of the third step is 18.75$m^3$
 \\=so, we can clearly notice that the volume of the steps are in arthimetic progression.
-\\=the first term of A.P is 6.25,
+\\let the first term of the AP be $x(n)=6.25$
 \\=the common difference is 6.25
 \\=we have to find the sum of first 15 terms
-\\=the formula of sum of first n terms in an AP is \[
-S_n = \frac{n}{2} [2a+(n-1)d]
-\]
+\\=the formula of sum of first n terms in an AP is \begin{align}
+S_n = \frac{n+1}{2} [2a+(n)d]   
+\\ \textbf{here n starts from 0}
+\end{align}
 \\=n= number of terms
 \\=a is  first term of the AP
 \\d is the common difference
-\\here\begin{align}
-a&= 6.25
-\\d&=6.25  
-\\n&=15
+\\here\\
+\\\begin{tabular}{|c|c| }
+\hline
+\textbf{parameter}& \textbf{value}
+\\\hline
+\multirow{3}{1em}\\a&$6.25$
+\\d&$6.25$
+\\n&$14$
+\\\hline
+\end{tabular}
+\begin{align}
+    S_n &= \frac{14+1}{2} [12.5+(14)6.25]
 \end{align}
-\[
-S_n = \frac{n}{2} [2a+(n-1)d]
-\]
-\[
-S_n = \frac{15}{2} [12.5+(15-1)6.25]
-\]
-\[
-S_n = \frac{15}{2} [12.5+(14)6.25]
-\]
-\[
-S_n = \frac{15}{2} [12.5+87.5]
-\]
-\[{{volume}}=7.5 \cdot 100
-\]
+\begin{align}
+S_n = \frac{15}{2}[12.5(14)6.25]
+\end{align}
+   \begin{align}
+   S_n = \frac{15}{2} [12.5+87.5]
+   \end{align}
+   \begin{align}
+   volume=(7.5) \cdot 100
+   \end{align}
 \\    volume is  750
-\\hence, the volume of the total concerate is 750 cubicmeters
+\\hence, the volume of the total concerate is 750 $m^3$
+\\\\\textbf{x(n) and u(n)}
+\\let x(n) be the n'th term of the above AP
+\\x(n)=a+nd
+\\here 
+\\ a is the first term of the AP
+\\d is the common difference
+\\n starts from zero
+\\ \textbf{n'th term in terms of u(n)}
+\\\begin{align}
+    \text{{x(n)}}=(a+n \cdot d ) \cdot u(n)
+\end{align}
+\\\begin{tabular}{|c|c|c|c| }
+\hline
+\textbf{n}& \textbf{u(n)}& \textbf{x(n)}& \textbf{relation}
+\\\hline
+\multirow{3}{1em}\\$n<0$&0&0&x(n)=u(n)=0
+\\0&1&a&x(n)=(a)(u(n))
+\\$n>0$&1&(a+nd)&x(n)=(a+nd)u(n)
+\\\hline
+\end{tabular}
+
+
  \end{document}
