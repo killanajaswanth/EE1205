@@ -7,6 +7,7 @@
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
+\usepackage[justification=centering]{caption}
 \usepackage{txfonts}
 \usepackage{listings}
 \usepackage{enumitem}
@@ -63,53 +64,36 @@ m long and built of solid concrete.Each step has a rise of 1/4 m and a tread of
 \end{align}
 \textbf{solution} 
 \begin{align}
-\text{{dimensions of any step}}= length\cdot breadth\cdot height
+\text{{vloume of any step}}= length\cdot breadth\cdot height
 \end{align}
-\\length of first step is l 
-\\breadth of first step is b
-\\height of first step is h.
-\\
-\\\begin{tabular}{|c|c| }
-\hline
-\textbf{parameter}& \textbf{value}
-\\\hline
-\multirow{3}{1em}\\\l&$50m$
-\\b&$0.5m$
-\\h&$0.25m$
-\\\hline
-\end{tabular}
+\\length,breadth,height of first step are 50m,0.25m,0.5m
 \begin{align}
-\text{{dimensions of first step}} = 50m \cdot 0.25m \cdot 0.5m
+\text{{volume of first step}} = 50m \cdot 0.25m \cdot 0.5m
 \end{align}
-\\=volume of first step is 6.25$m^3$
+\\=$6.25m^3$
 \\=All the dimensions except height are same for all 15 steps .
 \\=The height difference between any 2 consecutive steps is 0.25 m.
 \\=so, the height of the second step is 0.25m+0.25m=0.5m
-\\=So, the volume of the second step is 50m*5m*0.5m= 12.5$m^3$
+\\=So, the volume of the second step is (50m)(5m)(0.5m)= 12.5$m^3$
 \\=in the similar way the volume of the third step is 18.75$m^3$
-\\=so, we can clearly notice that the volume of the steps are in arthimetic progression.
-\\let the first term of the AP be $x(n)=6.25$
-\\=the common difference is 6.25
-\\=we have to find the sum of first 15 terms
-\\=the formula of sum of first n terms in an AP is \begin{align}
+\\=so, the volume of the steps are in arthimetic progression.
+\begin{align}
 S_n = \frac{n+1}{2} [2a+(n)d]   
 \\ \textbf{here n starts from 0}
 \end{align}
-\\=n= number of terms
-\\=a is  first term of the AP
-\\d is the common difference
 \\here\\
-\\\begin{tabular}{|c|c| }
+\\\begin{tabular}{|c|c|c|}
 \hline
-\textbf{parameter}& \textbf{value}
+\textbf{parameter}& \textbf{value}& \textbf{parameter}
 \\\hline
-\multirow{3}{1em}\\a&$6.25$
-\\d&$6.25$
-\\n&$14$
+\multirow{3}{1em}\\a&$6.25$&first term
+\\d&$6.25$&common diffrence
+\\n&$14$&no of terms from 0
 \\\hline
 \end{tabular}
+\\
 \begin{align}
-    S_n &= \frac{14+1}{2} [12.5+(14)6.25]
+    \\S_n &= \frac{14+1}{2} [12.5+(14)6.25]
 \end{align}
 \begin{align}
 S_n = \frac{15}{2}[12.5(14)6.25]
@@ -122,26 +106,18 @@ S_n = \frac{15}{2}[12.5(14)6.25]
    \end{align}
 \\    volume is  750
 \\hence, the volume of the total concerate is 750 $m^3$
-\\\\\textbf{x(n) and u(n)}
-\\let x(n) be the n'th term of the above AP
-\\x(n)=a+nd
-\\here 
-\\ a is the first term of the AP
-\\d is the common difference
-\\n starts from zero
-\\ \textbf{n'th term in terms of u(n)}
+\\\\\textbf{plot of x(n) and n}
 \\\begin{align}
     \text{{x(n)}}=(a+n \cdot d ) \cdot u(n)
 \end{align}
-\\\begin{tabular}{|c|c|c|c| }
-\hline
-\textbf{n}& \textbf{u(n)}& \textbf{x(n)}& \textbf{relation}
-\\\hline
-\multirow{3}{1em}\\$n<0$&0&0&x(n)=u(n)=0
-\\0&1&a&x(n)=(a)(u(n))
-\\$n>0$&1&(a+nd)&x(n)=(a+nd)u(n)
-\\\hline
-\end{tabular}
+\begin{figure}[h]
+    \renewcommand\thefigure{1}
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=1\linewidth]{/home/jaswwanth/Desktop/assign1/figs/Figure_1.png}
+    \caption{}
+    \label{stemplot2}
+\end{figure}
 
 
  \end{document}
