@@ -63,33 +63,28 @@ m long and built of solid concrete.Each step has a rise of 1/4 m and a tread of
     \text{{volume}}=1/4 \cdot 1/2 \cdot 50 
 \end{align}
 \textbf{solution} 
-\\\\\begin{tabular}{|c|c|}
-\hline
-\textbf{parameter for step one }& \textbf{value}
-\\\hline
-\multirow{3}{1em}\\length&50
-\\breadth&$0.25$
-\\height&$0.5$
-\\volume&$6.25$ 
-\\\hline
-\end{tabular}
-\\
-\\=The height difference between any 2 consecutive steps is 0.25 m.
-\\=So, the volume of the second step is (50m)(5m)(0.5m)= 12.5$m^3$ and third is 18.75$m^3$
+\begin{table}[!ht]
+ \centering
+  \input{tables/table1.tex}
+   \caption{input parameters}
+   \label{tab:10.5.4.5}
+   \end{table}
+\begin{align}
+\\l{_{n}}=l{_{n+1}}
+\\b{_{n}}=b{_{n+1}}
+\\h{_{n+1}}-h{_{n}}=0.25
+\\V{_{n+1}}-V{_{n}}=6.25
+\end{align}
 \begin{align}
 S_n = \frac{n+1}{2} [2a+(n)d]   
 \\n=0,1,2,3,...
 \end{align}
-here\\
-\\\begin{tabular}{|c|c|c|}
-\hline
-\textbf{parameter}& \textbf{value}& \textbf{measurement}
-\\\hline
-\multirow{3}{1em}\\a&$6.25$&first term
-\\d&$6.25$&common diffrence
-\\n&$14$&no of terms from 0
-\\\hline
-\end{tabular}
+here\\\begin{table}[!ht]
+ \centering
+  \input{tables/table2.tex}
+   \caption{formula parameters}
+   \label{tab:10.5.4.5}
+   \end{table}
 \begin{align}\\S_n &= \frac{14+1}{2} [12.5+(14)6.25]
 \end{align}
 \begin{align}
@@ -102,8 +97,8 @@ S_n = \frac{15}{2}[12.5(14)6.25]
    volume=(7.5) \cdot 100
    &=750m^3
    \end{align}
-\\\\\textbf{plot of x(n) and n}
-\\\begin{align}
+\textbf{plot of x(n) and n}
+\begin{align}
     \text{{x(n)}}=(a+n \cdot d ) \cdot u(n)
 \end{align}
 \begin{figure}[h]
@@ -117,8 +112,6 @@ S_n = \frac{15}{2}[12.5(14)6.25]
 \\x(n)\overset{Z}{\longleftrightarrow}  X(Z)
 \\x(n)=(a+nd)u(n)
 \\X(Z)&=\sum_{-\infty}^{\infty}x(n)Z^{-n}\
-\\&=\sum_{-\infty}^{\infty}(a+nd)u(n)Z^{-n}\
-\\&=0+\sum_{0}^{\infty}(a+nd)Z^{-n}\
 \\&=\frac{x(0)}{1-\,z^{-1}}+\frac{dz^{-1}}{({1-{z^{-1}}})^2}\:\:,|z|>|r|
 \\&=\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{({1-{z^{-1}}})^2}\:\:,|z|>|r|
 \end{align}
