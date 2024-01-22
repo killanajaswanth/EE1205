@@ -70,13 +70,10 @@ m long and built of solid concrete.Each step has a rise of 1/4 m and a tread of
    \label{tab:10.5.4.5}
    \end{table}
 \begin{align}
-\\l{_{n}}=l{_{n+1}}
-\\b{_{n}}=b{_{n+1}}
-\\h{_{n+1}}-h{_{n}}=0.25m
-\\V{_{n+1}}-V{_{n}}=6.25m^3
+x(n+1)-x(n)=6.25m^3
 \end{align}
 \begin{align}
-S_n = \frac{n+1}{2} [2x(0)+(n)d]   
+y(n) = \frac{n+1}{2} [2x(0)+(n)d]   
 \\n=0,1,2,3,...
 \end{align}
 here\\\begin{table}[!ht]
@@ -85,16 +82,17 @@ here\\\begin{table}[!ht]
    \caption{formula parameters}
    \label{tab:10.5.4.5}
    \end{table}
-\begin{align}\\S_n &= \frac{14+1}{2} [12.5+(14)6.25]
+\begin{align}
+y(14) &= \frac{14+1}{2} [12.5+(14)6.25]
 \end{align}
 \begin{align}
-S_n = \frac{15}{2}[12.5(14)6.25]
+ &= \frac{15}{2}[12.5(14)6.25]
 \end{align}
    \begin{align}
-   S_n = \frac{15}{2} [12.5+87.5]
+    &= \frac{15}{2} [12.5+87.5]
    \end{align}
    \begin{align}
-   V=(7.5) \cdot 100
+   =(7.5) \cdot 100
    &=750m^3
    \end{align}
 \textbf{plot of x(n) and n}
@@ -109,10 +107,12 @@ S_n = \frac{15}{2}[12.5(14)6.25]
     \caption{}
     \label{stemplot2}
 \end{figure}\begin{align}
-\\x(n)\overset{Z}{\longleftrightarrow}  X(Z)
+x(n)\overset{Z}{\longleftrightarrow}  X(Z)
 \\x(n)=(x(0)+nd)u(n)
 \\X(Z)&=\sum_{-\infty}^{\infty}x(n)Z^{-n}\
 \\&=\frac{x(0)}{1-\,z^{-1}}+\frac{dz^{-1}}{({1-{z^{-1}}})^2}\:\:,|z|>|r|
 \\&=\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{({1-{z^{-1}}})^2}\:\:,|z|>|r|
 \end{align}
+\textbf{convolution for y(n)}
+\\y(n)=$\int_{-\infty}^{\infty}{u({\tau})(x(0)+(n-\tau)6.25)d\tau}$
  \end{document}
