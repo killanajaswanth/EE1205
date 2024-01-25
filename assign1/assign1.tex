@@ -115,9 +115,9 @@ x(n)\overset{Z}{\longleftrightarrow}  X(Z)
 \end{align}
 \textbf{{convolution for y(n)}}
 \begin{align}
-(f*g)(t)&=\sum_{-\infty}^{\infty}{f({\tau})g(t-{\tau})d\tau}
-\\f(t)&=u(n)
-\\g(t)&=x(n)=x(0)+6.25n
-\\y(n)&=\sum_{-\infty}^{\infty}{u({\tau})(x(0)+(n-\tau)6.25)d\tau}
+(f*g)[n]&=\sum_{-\infty}^{\infty}{f[\tau]g[n-\tau]}
+\\f[n]&=u[n]
+\\g[n]&=x[n]=x(0)+6.25n
+\\y[n]&=\sum_{-\infty}^{\infty}{u[\tau](x(0)+(n-\tau)6.25)}
 \end{align}
  \end{document}
