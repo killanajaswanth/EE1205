@@ -65,7 +65,7 @@ m long and built of solid concrete.Each step has a rise of 1/4 m and a tread of
 \textbf{solution} 
 \begin{table}[!ht]
  \centering
-  \input{tables/table1.tex}
+  \input{table1.tex}
    \caption{input parameters}
    \label{tab:10.5.4.5}
    \end{table}
@@ -78,7 +78,7 @@ y(n) = \frac{n+1}{2} [2x(0)+(n)d]
 \end{align}
 here\\\begin{table}[!ht]
  \centering
-  \input{tables/table2.tex}
+  \input{table2.tex}
    \caption{formula parameters}
    \label{tab:10.5.4.5}
    \end{table}
@@ -113,6 +113,11 @@ x(n)\overset{Z}{\longleftrightarrow}  X(Z)
 \\&=\frac{x(0)}{1-\,z^{-1}}+\frac{dz^{-1}}{({1-{z^{-1}}})^2}\:\:,|z|>|r|
 \\&=\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{({1-{z^{-1}}})^2}\:\:,|z|>|r|
 \end{align}
-\textbf{convolution for y(n)}
-\\y(n)=$\int_{-\infty}^{\infty}{u({\tau})(x(0)+(n-\tau)6.25)d\tau}$
+\textbf{{convolution for y(n)}}
+\begin{align}
+(f*g)(t)&=\int_{-\infty}^{\infty}{f({\tau})g(t-{\tau})d\tau}
+\\f(t)&=u(n)
+\\g(t)&=x(n)=x(0)+6.25n
+\\y(n)&=\int_{-\infty}^{\infty}{u({\tau})(x(0)+(n-\tau)6.25)d\tau}
+\end{align}
  \end{document}
