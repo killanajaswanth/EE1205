@@ -60,7 +60,7 @@ A small terrace at a football ground comprises of 15 steps each of which is 50
 m long and built of solid concrete.Each step has a rise of 1/4 m and a tread of
 1/2 m. Calculate the total volume of concrete required to build the terrace.
 [Hint: Volume of concrete required to build the first step=\begin{align}
-    \text{{V}}=\frac{1}{4} \cdot \frac{1}{2} \cdot 50 
+    V&=\frac{1}{4} \cdot \frac{1}{2} \cdot 50 
 \end{align}
 \textbf{solution} 
 \begin{table}[!ht]
@@ -70,11 +70,11 @@ m long and built of solid concrete.Each step has a rise of 1/4 m and a tread of
    \label{tab:10.5.4.5}
    \end{table}
 \begin{align}
-x(n+1)-x(n)=6.25m^3
+x\brak{n+1}-x\brak{n}&=6.25m^3
 \end{align}
 \begin{align}
-y(n) = \frac{n+1}{2} [2x(0)+(n)d]   
-\\n=0,1,2,3,...
+y\brak{n} &= \frac{n+1}{2} \sbrak{2x\brak{0}+\brak{n}d}   
+\\n&=0,1,2,3,...
 \end{align}
 here\\\begin{table}[!ht]
  \centering
@@ -83,41 +83,40 @@ here\\\begin{table}[!ht]
    \label{tab:10.5.4.5}
    \end{table}
 \begin{align}
-y(14) &= \frac{14+1}{2} [12.5+(14)6.25]
+y\brak{14} &= \frac{14+1}{2} \sbrak{12.5+\brak{14}6.25}
 \end{align}
 \begin{align}
- &= \frac{15}{2}[12.5(14)6.25]
+ &= \frac{15}{2}\sbrak{12.5\brak{14}6.25}
 \end{align}
    \begin{align}
-    &= \frac{15}{2} [12.5+87.5]
+    &= \frac{15}{2} \sbrak{12.5+87.5}
    \end{align}
    \begin{align}
-   =(7.5) \cdot 100
+   &=\brak{7.5} \cdot 100
    &=750m^3
    \end{align}
-\textbf{plot of x(n) and n}
+plot of x\brak{n} and n
 \begin{align}
-    \text{{x(n)}}=(x(0)+n \cdot d ) \cdot u(n)
+    \text{x\brak{n}}=\brak{x\brak{0}+n \cdot d } \cdot u\brak{n}
 \end{align}
-\begin{figure}[h]
-    \renewcommand\thefigure{1}
+\begin{figure}
     \centering
-    \captionsetup{justification=centering}
-    \includegraphics[width=1\linewidth]{Figure_1.png}
-    \caption{}
-    \label{stemplot2}
-\end{figure}\begin{align}
-x(n)\overset{Z}{\longleftrightarrow}  X(Z)
-\\x(n)=(x(0)+nd)u(n)
-\\X(Z)&=\sum_{-\infty}^{\infty}x(n)Z^{-n}\
-\\&=\frac{x(0)}{1-\,z^{-1}}+\frac{dz^{-1}}{({1-{z^{-1}}})^2}\:\:,|z|>|r|
-\\&=\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{({1-{z^{-1}}})^2}\:\:,|z|>|r|
-\end{align}
-\textbf{{convolution for y(n)}}
+    \includegraphics[width=1\linewidth]{image.png}
+    \caption{plot x\brak{n} vs n}
+    \label{fig:enter-label}
+\end{figure}
 \begin{align}
-(f*g)[n]&=\sum_{-\infty}^{\infty}{f[\tau]g[n-\tau]}
-\\f[n]&=u[n]
-\\g[n]&=x[n]=x(0)+6.25n
-\\y[n]&=\sum_{-\infty}^{\infty}{u[\tau](x(0)+(n-\tau)6.25)}
+x\brak{n}\overset{Z}{\longleftrightarrow}  X\brak{Z}
+\\x\brak{n}&=\brak{x\brak{0}+nd}u\brak{n}
+\\X\brak{Z}&=\sum_{-\infty}^{\infty}x\brak{n}Z^{-n}\
+\\&=\frac{x(0)}{1-\,z^{-1}}+\frac{dz^{-1}}{\brak{1-{z^{-1}}}}^2\:\:,|z|>|r|
+\\&=\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{\brak{1-{z^{-1}}}^2}\:\:,|z|>|r|
+\end{align}
+convolution for y\brak{n}
+\begin{align}
+\brak{f*g}\sbrak{n}&=\sum_{-\infty}^{\infty}{f\brak{\tau}g\sbrak{n-\tau}}
+\\f\sbrak{n}&=u\sbrak{n}
+\\g\sbrak{n}&=x\sbrak{n}=x\brak{0}+6.25n
+\\y\sbrak{n}&=\sum_{-\infty}^{\infty}{u\sbrak{\tau}\brak{x\brak{0}+\brak{n-\tau}\brak{6.25}}}
 \end{align}
  \end{document}
