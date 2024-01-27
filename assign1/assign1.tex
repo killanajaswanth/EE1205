@@ -73,27 +73,21 @@ solution:
 x\brak{n+1}-x\brak{n}&=6.25m^3
 \end{align}
 \begin{align}
-y\brak{n} &= \frac{n+1}{2} \sbrak{2x\brak{0}+\brak{n}d}   
-\\n&=0,1,2,3,...
+y\brak{n} &= \frac{n+1}{2} \sbrak{2x\brak{0}+\brak{n}d} \\ 
+n&=0\quad1\quad2\quad3\quad...
 \end{align}
-here\\\begin{table}[!ht]
+here\begin{table}[!ht]
  \centering
   \input{table2.tex}
    \caption{formula parameters}
    \label{tab:10.5.4.5}
    \end{table}
 \begin{align}
-y\brak{14} &= \frac{14+1}{2} \sbrak{12.5+\brak{14}6.25}
-\end{align}
-\begin{align}
- &= \frac{15}{2}\sbrak{12.5\brak{14}6.25}
-\end{align}
-   \begin{align}
-    &= \frac{15}{2} \sbrak{12.5+87.5}
-   \end{align}
-   \begin{align}
-   &=\brak{7.5} \cdot 100
-  \\ &=750m^3
+y\brak{14} &= \frac{14+1}{2} \sbrak{12.5+\brak{14}6.25}\\
+ &= \frac{15}{2}\sbrak{12.5\brak{14}6.25}\\
+&= \frac{15}{2} \sbrak{12.5+87.5}\\
+   &=\brak{7.5} \cdot 100\\
+   &=750m^3
    \end{align}
 \begin{figure}[!ht]
     \centering
@@ -103,21 +97,25 @@ y\brak{14} &= \frac{14+1}{2} \sbrak{12.5+\brak{14}6.25}
 \end{figure}
 \begin{align}
 x\brak{n}\overset{Z}{\longleftrightarrow}  X\brak{Z}
-\\x\brak{n}&=\brak{x\brak{0}+nd}u\brak{n}
-\\X\brak{Z}&=\sum_{-\infty}^{\infty}x\brak{n}Z^{-n}\
-\\&=\frac{x(0)}{1-\,z^{-1}}+\frac{dz^{-1}}{\brak{1-{z^{-1}}}}^2\:\:,|z|>1
-\\&=\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{\brak{1-{z^{-1}}}^2}\:\:,|z|>1
+\end{align}
+\begin{align}
+x\brak{n}&=\brak{x\brak{0}+nd}u\brak{n}
+\end{align}
+\begin{align}
+X\brak{Z}&=\sum_{-\infty}^{\infty}x\brak{n}Z^{-n}\\\
+&=\frac{x(0)}{1-\,z^{-1}}+\frac{dz^{-1}}{\brak{1-{z^{-1}}}}^2\:\:
+\quad\abs{z}>\abs{1}\\
+&=\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{\brak{1-{z^{-1}}}^2}\:\:\quad\abs{z}>\abs{1}
 \end{align}
 convolution for y\brak{n}:
 \begin{align}
-\\y\brak{n}&=x\brak{n}*u\brak{n}
-\\x\brak{n}\overset{Z}{\longleftrightarrow}  X\brak{Z}
-\\u\brak{n}\overset{Z}{\longleftrightarrow}  U\brak{Z}
-\\y\brak{n}\overset{Z}{\longleftrightarrow}  Y\brak{Z}
-\\Y\brak{z}&=X\brak{z}U\brak{z}
-\\X\brak{z}&=\brak{\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{\brak{1-{z^{-1}}}^2}},|z|>1
-\\U\brak{z}&=\frac{1}{1-\,z^{-1}},|z|>1
-\\Y\brak{z}&=\brak{\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{\brak{1-{z^{-1}}}^2}}\brak{\frac{1}{1-\,z^{-1}}}
-\\|z|>1
+y\brak{n}&=x\brak{n}*u\brak{n}\\
+x\brak{n}\overset{Z}{\longleftrightarrow}  X\brak{Z}\\
+u\brak{n}\overset{Z}{\longleftrightarrow}  U\brak{Z}\\
+y\brak{n}\overset{Z}{\longleftrightarrow}  Y\brak{Z}\\
+Y\brak{z}&=X\brak{z}U\brak{z}\\
+X\brak{z}&=\brak{\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{\brak{1-{z^{-1}}}^2}}\quad\abs{z}>\abs{1}\\
+U\brak{z}&=\frac{1}{1-\,z^{-1}}\quad\abs{z}>\abs{1}\\
+Y\brak{z}&=\brak{\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{\brak{1-{z^{-1}}}^2}}\brak{\frac{1}{1-\,z^{-1}}}
 \end{align}
  \end{document}
