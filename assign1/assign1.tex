@@ -101,7 +101,6 @@ y\brak{14} &= \frac{14+1}{2} \sbrak{12.5+\brak{14}6.25}
     \caption{plot x\brak{n} vs n}
     \label{fig:enter-label}
 \end{figure}
-\\z transform of x\brak{n}:
 \begin{align}
 x\brak{n}\overset{Z}{\longleftrightarrow}  X\brak{Z}
 \\x\brak{n}&=\brak{x\brak{0}+nd}u\brak{n}
@@ -111,14 +110,14 @@ x\brak{n}\overset{Z}{\longleftrightarrow}  X\brak{Z}
 \end{align}
 convolution for y\brak{n}:
 \begin{align}
-\\\brak{x*u}\sbrak{n}&=\sum_{-\infty}^{\infty}{u\brak{\tau}x\sbrak{n-\tau}}
 \\y\brak{n}&=x\brak{n}*u\brak{n}
-\\y\sbrak{n}&=\sum_{-\infty}^{\infty}{u\sbrak{\tau}\brak{x\brak{0}+\brak{n-\tau}\brak{6.25}}}
 \\x\brak{n}\overset{Z}{\longleftrightarrow}  X\brak{Z}
 \\u\brak{n}\overset{Z}{\longleftrightarrow}  U\brak{Z}
 \\y\brak{n}\overset{Z}{\longleftrightarrow}  Y\brak{Z}
 \\Y\brak{z}&=X\brak{z}U\brak{z}
-\\Y\brak{z}&=\brak{\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{\brak{1-{z^{-1}}}^2}}U\brak{z}
-\\|z|&>1
+\\X\brak{z}&=\brak{\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{\brak{1-{z^{-1}}}^2}},|z|>1
+\\U\brak{z}&=\frac{1}{1-\,z^{-1}},|z|>1
+\\Y\brak{z}&=\brak{\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{\brak{1-{z^{-1}}}^2}}\brak{\frac{1}{1-\,z^{-1}}}
+\\|z|>1
 \end{align}
  \end{document}
