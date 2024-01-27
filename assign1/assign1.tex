@@ -55,14 +55,14 @@
 
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
-\textbf{Question}:\\
+Question:\\
 A small terrace at a football ground comprises of 15 steps each of which is 50
 m long and built of solid concrete.Each step has a rise of 1/4 m and a tread of
 1/2 m. Calculate the total volume of concrete required to build the terrace.
 [Hint: Volume of concrete required to build the first step=\begin{align}
     V&=\frac{1}{4} \cdot \frac{1}{2} \cdot 50 
 \end{align}
-\textbf{solution} 
+solution:
 \begin{table}[!ht]
  \centering
   \input{table1.tex}
@@ -93,30 +93,32 @@ y\brak{14} &= \frac{14+1}{2} \sbrak{12.5+\brak{14}6.25}
    \end{align}
    \begin{align}
    &=\brak{7.5} \cdot 100
-   &=750m^3
+  \\ &=750m^3
    \end{align}
-plot of x\brak{n} and n
-\begin{align}
-    \text{x\brak{n}}=\brak{x\brak{0}+n \cdot d } \cdot u\brak{n}
-\end{align}
-\begin{figure}
+\begin{figure}[!ht]
     \centering
     \includegraphics[width=1\linewidth]{image.png}
     \caption{plot x\brak{n} vs n}
     \label{fig:enter-label}
 \end{figure}
+\\z transform of x\brak{n}:
 \begin{align}
 x\brak{n}\overset{Z}{\longleftrightarrow}  X\brak{Z}
 \\x\brak{n}&=\brak{x\brak{0}+nd}u\brak{n}
 \\X\brak{Z}&=\sum_{-\infty}^{\infty}x\brak{n}Z^{-n}\
-\\&=\frac{x(0)}{1-\,z^{-1}}+\frac{dz^{-1}}{\brak{1-{z^{-1}}}}^2\:\:,|z|>|r|
-\\&=\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{\brak{1-{z^{-1}}}^2}\:\:,|z|>|r|
+\\&=\frac{x(0)}{1-\,z^{-1}}+\frac{dz^{-1}}{\brak{1-{z^{-1}}}}^2\:\:,|z|>1
+\\&=\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{\brak{1-{z^{-1}}}^2}\:\:,|z|>1
 \end{align}
-convolution for y\brak{n}
+convolution for y\brak{n}:
 \begin{align}
-\brak{f*g}\sbrak{n}&=\sum_{-\infty}^{\infty}{f\brak{\tau}g\sbrak{n-\tau}}
-\\f\sbrak{n}&=u\sbrak{n}
-\\g\sbrak{n}&=x\sbrak{n}=x\brak{0}+6.25n
+\\\brak{x*u}\sbrak{n}&=\sum_{-\infty}^{\infty}{u\brak{\tau}x\sbrak{n-\tau}}
+\\y\brak{n}&=x\brak{n}*u\brak{n}
 \\y\sbrak{n}&=\sum_{-\infty}^{\infty}{u\sbrak{\tau}\brak{x\brak{0}+\brak{n-\tau}\brak{6.25}}}
+\\x\brak{n}\overset{Z}{\longleftrightarrow}  X\brak{Z}
+\\u\brak{n}\overset{Z}{\longleftrightarrow}  U\brak{Z}
+\\y\brak{n}\overset{Z}{\longleftrightarrow}  Y\brak{Z}
+\\Y\brak{z}&=X\brak{z}U\brak{z}
+\\Y\brak{z}&=\brak{\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{\brak{1-{z^{-1}}}^2}}U\brak{z}
+\\|z|&>1
 \end{align}
  \end{document}
