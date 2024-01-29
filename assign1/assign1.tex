@@ -63,11 +63,6 @@ m long and built of solid concrete.Each step has a rise of 1/4 m and a tread of
     V&=\frac{1}{4} \cdot \frac{1}{2} \cdot 50 
 \end{align}
 solution:
-\begin{align}
-x\brak{n+1}-x\brak{n}&=6.25m^3\\
-y\brak{n} &= \frac{n+1}{2} \sbrak{2x\brak{0}+\brak{n}d} \\ 
-n&=0\quad1\quad2\quad3\quad...
-\end{align}
 here\begin{table}[!ht]
  \centering
   \input{table1.tex}
@@ -75,24 +70,36 @@ here\begin{table}[!ht]
    \label{tab:10.5.4.5}
    \end{table}
 \begin{align}
-y\brak{14} &= \frac{14+1}{2} \sbrak{12.5+\brak{14}6.25}\\\
-   &=750m^3
-   \end{align}
+x\brak{Z}&=\frac{x(0)}{1-\,z^{-1}}+\frac{dz^{-1}}{\brak{1-{z^{-1}}}^2}\:\:
+\quad\abs{z}>\abs{1}\\
+x\brak{Z}&=\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{\brak{1-{z^{-1}}}^2}\:\:\quad\abs{z}>\abs{1}\\
+&=\brak{\frac{6.25}{\brak{1-z^{-1}}^2}} \quad\abs{z}>\abs{1}\\
+\end{align}
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=1\linewidth]{image.png}
     \caption{plot x\brak{n} vs n}
     \label{fig:enter-label}
 \end{figure}
-\begin{align}
-x\brak{Z}&=\frac{x(0)}{1-\,z^{-1}}+\frac{dz^{-1}}{\brak{1-{z^{-1}}}^2}\:\:
-\quad\abs{z}>\abs{1}\\
-x\brak{Z}&=\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{\brak{1-{z^{-1}}}^2}\:\:\quad\abs{z}>\abs{1}
-\end{align}
 convolution for y\brak{n}:\\
 \begin{align}
-Y\brak{Z}&=X\brak{Z}U\brak{Z}\\
+Y\brak{n}&=x\brak{n}*u\brak{n}\\
+Y\brak{Z}&=x\brak{Z}U\brak{Z}\\
 U\brak{Z}&=\frac{1}{1-\,z^{-1}}\quad\abs{z}>\abs{1}\\
-Y\brak{Z}&=\brak{\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{\brak{1-{z^{-1}}}^2}}\brak{\frac{1}{1-\,z^{-1}}}
+Y\brak{Z}&=\brak{\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{\brak{1-{z^{-1}}}^2}}\brak{\frac{1}{1-\,z^{-1}}}\quad\abs{z}>\abs{1}\\
+Y\brak{z}&=\frac{6.25}{\brak{1-z}^{-3}} \quad\abs{z}>\abs{1}\\
+\end{align}
+  contour integration to find inverse z transform
+\begin{align}
+y(15)&=\frac{1}{2{\pi}j}{\oint_c}Y\brak{Z}z^{14}dz\\
+&=\frac{1}{2{\pi}j}{\oint_c}{\frac{6.25z^{14}}{\brak{1-z^{-1}}^{3}}}\\
+\end{align}
+pole at 1 repeated 3 times\\
+\begin{align}
+m&=3\\
+R&=\frac{1}{\brak{m-1}!}\lim_{z\to a}\frac{d^{m-1}}{dz^{m-1}}\brak{\brak{z-a}^mf{\brak{z}}}\\
+&=\frac{1}{\brak{2!}}\lim_{z\to 1}\frac{d^2}{dz^2}\brak{\brak{z-1}^{3}\frac{6.25z^{16}}{\brak{z-1}^3}}\\
+&=3.125\lim_{z\to1}\frac{d^2}{dz^2}\brak{z^{16}}\\
+y\brak{15}&=750
 \end{align}
  \end{document}
