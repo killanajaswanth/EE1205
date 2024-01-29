@@ -76,8 +76,6 @@ here\begin{table}[!ht]
    \end{table}
 \begin{align}
 y\brak{14} &= \frac{14+1}{2} \sbrak{12.5+\brak{14}6.25}\\\
-&= \frac{15}{2} \sbrak{12.5+87.5}\\
-   &=\brak{7.5} \cdot 100\\
    &=750m^3
    \end{align}
 \begin{figure}[!ht]
@@ -87,24 +85,14 @@ y\brak{14} &= \frac{14+1}{2} \sbrak{12.5+\brak{14}6.25}\\\
     \label{fig:enter-label}
 \end{figure}
 \begin{align}
-x\brak{n}\overset{Z}{\longleftrightarrow}  X\brak{Z}
-\end{align}
-\begin{align}
-x\brak{n}&=\brak{x\brak{0}+nd}u\brak{n}
-\end{align}
-\begin{align}
-X\brak{Z}&=\sum_{-\infty}^{\infty}x\brak{n}Z^{-n}\\\
-&=\frac{x(0)}{1-\,z^{-1}}+\frac{dz^{-1}}{\brak{1-{z^{-1}}}^2}\:\:
+x\brak{Z}&=\frac{x(0)}{1-\,z^{-1}}+\frac{dz^{-1}}{\brak{1-{z^{-1}}}^2}\:\:
 \quad\abs{z}>\abs{1}\\
-&=\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{\brak{1-{z^{-1}}}^2}\:\:\quad\abs{z}>\abs{1}
+x\brak{Z}&=\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{\brak{1-{z^{-1}}}^2}\:\:\quad\abs{z}>\abs{1}
 \end{align}
-convolution for y\brak{n}:
+convolution for y\brak{n}:\\
 \begin{align}
-y\brak{n}&=x\brak{n}*u\brak{n}\\
 Y\brak{Z}&=X\brak{Z}U\brak{Z}\\
-X\brak{Z}&=\brak{\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{\brak{1-{z^{-1}}}^2}}\quad\abs{z}>\abs{1}\\
 U\brak{Z}&=\frac{1}{1-\,z^{-1}}\quad\abs{z}>\abs{1}\\
 Y\brak{Z}&=\brak{\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{\brak{1-{z^{-1}}}^2}}\brak{\frac{1}{1-\,z^{-1}}}
 \end{align}
  \end{document}
- 
