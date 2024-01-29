@@ -63,12 +63,6 @@ m long and built of solid concrete.Each step has a rise of 1/4 m and a tread of
     V&=\frac{1}{4} \cdot \frac{1}{2} \cdot 50 
 \end{align}
 solution:
-\begin{table}[!ht]
- \centering
-  \input{table1.tex}
-   \caption{input parameters}
-   \label{tab:10.5.4.5}
-   \end{table}
 \begin{align}
 x\brak{n+1}-x\brak{n}&=6.25m^3\\
 y\brak{n} &= \frac{n+1}{2} \sbrak{2x\brak{0}+\brak{n}d} \\ 
@@ -76,13 +70,12 @@ n&=0\quad1\quad2\quad3\quad...
 \end{align}
 here\begin{table}[!ht]
  \centering
-  \input{table2.tex}
+  \input{table1.tex}
    \caption{formula parameters}
    \label{tab:10.5.4.5}
    \end{table}
 \begin{align}
-y\brak{14} &= \frac{14+1}{2} \sbrak{12.5+\brak{14}6.25}\\
- &= \frac{15}{2}\sbrak{12.5\brak{14}6.25}\\
+y\brak{14} &= \frac{14+1}{2} \sbrak{12.5+\brak{14}6.25}\\\
 &= \frac{15}{2} \sbrak{12.5+87.5}\\
    &=\brak{7.5} \cdot 100\\
    &=750m^3
@@ -101,19 +94,17 @@ x\brak{n}&=\brak{x\brak{0}+nd}u\brak{n}
 \end{align}
 \begin{align}
 X\brak{Z}&=\sum_{-\infty}^{\infty}x\brak{n}Z^{-n}\\\
-&=\frac{x(0)}{1-\,z^{-1}}+\frac{dz^{-1}}{\brak{1-{z^{-1}}}}^2\:\:
+&=\frac{x(0)}{1-\,z^{-1}}+\frac{dz^{-1}}{\brak{1-{z^{-1}}}^2}\:\:
 \quad\abs{z}>\abs{1}\\
 &=\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{\brak{1-{z^{-1}}}^2}\:\:\quad\abs{z}>\abs{1}
 \end{align}
 convolution for y\brak{n}:
 \begin{align}
 y\brak{n}&=x\brak{n}*u\brak{n}\\
-x\brak{n}&\overset{Z}{\longleftrightarrow}  X\brak{Z}\\
-u\brak{n}&\overset{Z}{\longleftrightarrow}  U\brak{Z}\\
-y\brak{n}&\overset{Z}{\longleftrightarrow}  Y\brak{Z}\\
-Y\brak{z}&=X\brak{z}U\brak{z}\\
-X\brak{z}&=\brak{\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{\brak{1-{z^{-1}}}^2}}\quad\abs{z}>\abs{1}\\
-U\brak{z}&=\frac{1}{1-\,z^{-1}}\quad\abs{z}>\abs{1}\\
-Y\brak{z}&=\brak{\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{\brak{1-{z^{-1}}}^2}}\brak{\frac{1}{1-\,z^{-1}}}
+Y\brak{Z}&=X\brak{Z}U\brak{Z}\\
+X\brak{Z}&=\brak{\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{\brak{1-{z^{-1}}}^2}}\quad\abs{z}>\abs{1}\\
+U\brak{Z}&=\frac{1}{1-\,z^{-1}}\quad\abs{z}>\abs{1}\\
+Y\brak{Z}&=\brak{\frac{6.25}{1-\,z^{-1}}+\frac{6.25z^{-1}}{\brak{1-{z^{-1}}}^2}}\brak{\frac{1}{1-\,z^{-1}}}
 \end{align}
  \end{document}
+ 
