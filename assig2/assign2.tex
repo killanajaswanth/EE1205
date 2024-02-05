@@ -7,6 +7,7 @@
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
+\usepackage[justification=centering]{caption}
 \usepackage{txfonts}
 \usepackage{listings}
 \usepackage{enumitem}
@@ -59,10 +60,9 @@ question:\begin{align}
 \end{align}
 then show that a,b,c,d are in G.P\\\\
 solution:\\
-let a=x\brak{0}, b=x\brak{1}, c=x\brak{2}, d=x\brak{3}
 \\\begin{table}[!ht]
  \centering
-  \input{tables/tableassign2.tex}
+  \input{tableassign2.tex}
    \caption{input parameters}
    \label{tab:11.9.5.13}
    \end{table}
@@ -81,6 +81,7 @@ So, x\brak{0},x\brak{1},x\brak{2},x\brak{3} are in G.P\\
 Applying z-transform\\
 \begin{align}
 X\brak{z}&=\frac{x(0)}{1-rz^{-1}} \quad \abs{z}>\abs{r}\\
-X\brak{z}&=\frac{x\brak{0}}{1-\frac{x\brak{n}}{x\brak{n-1}}z^{-1}}\quad \abs{z}>\abs{\frac{x\brak{n}}{x\brak{n-1}}}
+X\brak{z}&=\frac{a^2}{a-bz^{-1}}\quad \abs{z}>\abs{\frac{b}{a}}\\
+X\brak{z}&=\frac{x\brak{0}^2}{x\brak{0}-x\brak{1}z^{-1}}\quad \abs{z}>\abs{\frac{x\brak{1}}{x\brak{0}}}
 \end{align}
 \end{document}
