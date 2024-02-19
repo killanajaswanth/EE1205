@@ -55,46 +55,57 @@
 \renewcommand{\thetable}{\theenumi}
 \textbf{Question}:\\
 In the circuit shown below, switch S was closed for a long time. If the switch is opened at t=0, the maximum magnitude of the voltage $V_R$ in volts is. (round off to nearest integer).\\
+\textbf{solution} :
 \begin{figure}[th]
 \centering
-\includegraphics[width=\linewidth]{gate.png}
+\includegraphics[width=\linewidth]{/root/assign3/figs/gate.png}
 \caption{}
 \label{}
 \end{figure}
-\textbf{solution} :
+\begin{align}
+ At, t=0^-
+\end{align}
+inductor acts as wire\\
+apply KVL in big loop
+\begin{align}
+-2+1i\brak{0^-}&=0\\
+i\brak{0^-}&=2A
+\end{align}
 here\begin{table}[!ht]
  \centering
-  \input{table1}
+  \input{tables/table1.tex}
    \caption{input parameters}
    \label{GATE-2023,EC-35}
    \end{table}
-at $t<0$, switch is closed\\
-after $t=0$, switch is opened\\
-for an inductor \begin{align}
-i\brak{0^{+}}=i\brak{0^{-}}
+after t=0,\\
+KVL, \begin{align}
+2i\brak{t}+L\frac{di}{dt}
 \end{align}
-apply KVL before $t<0$\\
-inductor acts as wire\\
--\begin{align}
--2V+i\brak{0^-}&=0\\
-\implies i\brak{0^-}=i\brak{0^+}&=2A
-\end{align}
-after $t=0$;\\
-KVL in loop of inductor and  $2$\ohm \quad resistor\\
-\\ let i be current in the loop in anti clockwise direction\\
-\begin{align}
-L\frac{di}{dt}&=-2i\\
-\implies\frac{di}{i}&=\frac{-2dt}{L}\\
-\int_{i\brak{0^+}}^{i\brak{t}}{\frac{1}{i}\,di}&=\int_{0}^{t}{\frac{-2}{L}\,dt}\\
-ln\brak{\frac{i\brak{t}}{2}}&=-2t\\
-\implies i\brak{t}&=2\cdot{e^{-2t}}\\
-V_{R}&=2i\brak{t}V\\
- &=4\cdot{e^{-2t}}V
- \end{align}
+apply laplace transform,
  \begin{align}
- As, t\xrightarrow{}\infty\\
- e^{-2t}\xrightarrow{}1\\
- \abs{V_R\brak{max}}=4V
-\end{align}
+2I\brak{s}-Li\brak{{0^{-}}}+LsI\brak{s}&=0\\
+\implies I\brak{s}&=\frac{i\brak{{0^{-}}}}{s+2}\\
+I\brak{s}&=\frac{2}{s+2}
+ \end{align}
+ applying inverse laplace transform
+ \begin{align}
+  I\brak{t}&=2\cdot e^{-2t}\\
+  V_R&=-2I\brak{t}\\
+  \implies V_R&=-4\cdot e^{-2t}
+ \end{align}  
+  As,
+ \begin{align}
+    t & \xrightarrow{} 0\\
+     e^{-2t}&\xrightarrow{} 1\\
+     \abs{V_R\brak{max}}&=4
+ \end{align}
+ \begin{figure}[th]
+\centering
+\includegraphics[width=\linewidth]{/root/assign3/figs/ilspice.png}
+\caption{}
+\label{}
+\end{figure}
+This is the simulation for Vr vs time\\
+The magnitude of graph is max at $t=0$ of magnitude $4V$and then decreases with t. Which supports the solution by doing laplace transform method.
 \end{document}
 
