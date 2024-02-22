@@ -94,7 +94,7 @@ here\begin{table}[!ht]
    \begin{circuitikz}[american]
        \draw (0,3) to [R,a^=$2\ohm$,v=$V_R$](3,3); 
        \draw (0,0) to [short](0,3);
-       \draw (3,3) to [V,a^=$i\brak{0^-}$](3,0);
+       \draw (3,3) to [V,a^=$i\brak{0^-}V$](3,0);
        \draw (0,0) to [L,a^=$Ls$,i=$I\brak{s}$] (3,0);
    \end{circuitikz}
    \caption{s domain circuit}
@@ -116,14 +116,14 @@ I\brak{s}&=\frac{2}{s+2}
  \end{align}
  applying inverse laplace transform
  \begin{align}
-  i\brak{t}&=2e^{-2t} u\brak{t}\\
-  V_R\brak{t}&=-2i\brak{t}u\brak{t}\\
-  \implies V_R\brak{t}&=-4 e^{-2t} u\brak{t}
+  i\brak{t}&=2e^{-2t} u\brak{t}A\\
+  V_R\brak{t}&=-2i\brak{t}\\
+  \implies V_R\brak{t}&=-4 e^{-2t} u\brak{t}V
  \end{align}  
   As,
  \begin{align}
     t & \xrightarrow{} 0\\
      \implies e^{-2t}&\xrightarrow{} 1\\
-     \abs{V_R\brak{max}}&=4
+     \abs{V_R\brak{max}}&=4V
  \end{align}
 \end{document}
