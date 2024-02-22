@@ -56,64 +56,57 @@
 \renewcommand{\thetable}{\theenumi}
 \textbf{Question}:\\
 In the circuit shown below, switch S was closed for a long time. If the switch is opened at t=0, the maximum magnitude of the voltage $V_R$ in volts is. (round off to nearest integer).\\
-
-\textbf{solution} :
 \begin{figure}[th]
 \centering
 \includegraphics[width=\linewidth]{\root\assign3\figs\gate.png}
 \caption{}
 \label{}
 \end{figure}
-\begin{align}
- At, t=0^-
-\end{align}
-inductor acts as wire\\
-apply KVL in big loop
-\begin{align}
--2+1i\brak{0^-}&=0\\
-i\brak{0^-}&=2A
-\end{align}
- \begin{figure}[h!]
-   \centering
-   \begin{circuitikz}[american]
-       \draw (0,3) to [R,a^=$2\ohm$,v=$V_R$](3,3); 
-       \draw (0,0) to [short](0,3);
-       \draw (3,3) to [short](3,0);
-       \draw (0,0) to [L,a^=$1H$,i=$i\brak{t}$] (3,0);
-   \end{circuitikz}
-   \caption{steady state circuit}
-   \end{figure}
-here\begin{table}[!ht]
+\textbf{solution} :
+\begin{table}[!ht]
  \centering
   \input{tables\table1.tex}
    \caption{input parameters}
    \label{GATE-2023,EC-35}
    \end{table}
+ \begin{figure}[h!]
+   \centering
+   \begin{circuitikz}[american]
+       \draw (0,3) to [R,a^=$1\ohm$,v=$V_R$](3,3); 
+       \draw (0,3) to [V,a^=$2V$](0,0);
+       \draw (3,3) to [short](3,0);
+       \draw (0,0) to [short] (3,0);
+   \end{circuitikz}
+   \caption{steady state circuit}
+   \end{figure}
+\begin{align}
+ At, t=0^-
+\end{align}
+inductor acts as wire\\
+apply KVL 
+\begin{align}
+-2+1i\brak{0^-}&=0\\
+i\brak{0^-}&=2A
+\end{align}
+
    \begin{figure}[h!]
    \centering
    \begin{circuitikz}[american]
        \draw (0,3) to [R,a^=$2\ohm$,v=$V_R$](3,3); 
        \draw (0,0) to [short](0,3);
-       \draw (3,3) to [V,a^=$i\brak{0^-}V$](3,0);
+       \draw (3,3) to [V,a^=$2V$](3,0);
        \draw (0,0) to [L,a^=$Ls$,i=$I\brak{s}$] (3,0);
    \end{circuitikz}
-   \caption{s domain circuit}
+   \caption{s domain circuit fot $t>0$}
    \end{figure}
-after t=0,\\
-KVL, \begin{align}
-2i\brak{t}+L\frac{di}{dt}
-\end{align}
-apply laplace transform,
+\begin{align}
+2I\brak{s}-2V+LsI\brak{s}&=0\\
+\implies I\brak{s}&=\frac{2}{s+2}A
+ \end{align}
 \begin{figure}[!ht]
      \centering
-     \includegraphics[width=1\linewidth]{\root\assign3\figs\plot.png}
-     \caption{ plot of $\abs{V_{R}}$ vs  $t$}
+     \includegraphics[width=1\linewidth]{\r0ot\assign3\figs\fig.png}
  \end{figure}
- \begin{align}
-2I\brak{s}-Li\brak{{0^{-}}}+LsI\brak{s}&=0\\
-\implies I\brak{s}&=\frac{i\brak{{0^{-}}}}{s+2}\\
-I\brak{s}&=\frac{2}{s+2}
- \end{align}
  applying inverse laplace transform
  \begin{align}
   i\brak{t}&=2e^{-2t} u\brak{t}A\\

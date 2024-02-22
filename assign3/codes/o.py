@@ -10,10 +10,11 @@ t_values = [float(row[0]) for row in data]
 y_values = [float(row[1]) for row in data]
 
 # Plot
-plt.stem(t_values, y_values, linefmt='b-', markerfmt='bo', basefmt='r-')  # 'b-' is for blue line, 'bo' is for blue circles at each point, 'r-' is for red baseline
-plt.title('Stem Plot of y(t) vs. t')
+plt.plot(t_values, y_values, 'b-')  # 'b-' is for a blue continuous line
+plt.title('Continuous Plot of y(t) vs. t')
 plt.xlabel('t')
 plt.ylabel('y(t)')
 plt.grid(True)
-plt.savefig('plot.png')
+plt.savefig('fig.png')
 plt.show()
+
