@@ -1,0 +1,99 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\usepackage{circuitikz}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{GATE-2022, BM-37}
+\author{EE23BTECH11033- JASWANTH KILLANA}
+\maketitle
+\newpage
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+Question: Solution of the differential equation $\frac{dy}{dx}-y=cos\brak{x}$ is
+\begin{align}
+\brak{A}\quad y&=\frac{sin\brak{x}-cos\brak{x}}{2}+ce^x\\
+\brak{B}\quad y&=\frac{sin\brak{x}+cos\brak{x}}{2}+ce^x\\
+\brak{C}\quad y&=\frac{sin\brak{x}+cos\brak{x}}{2}+ce^{-x}\\
+\brak{D}\quad y&=\frac{sin\brak{x}-cos\brak{x}}{2}+ce^{-x}
+\end{align}
+Solution: \begin{align}\frac{dy}{dx}-y=cos\brak{x}
+\end{align}
+compare with,
+\begin{align}
+\frac{dy}{dx}+P\brak{x}y&=Q\brak{x}\\
+\implies -1&=P\brak{x}\\
+\implies cos\brak{x}&=Q\brak{x}
+\end{align}
+integrating factor=
+\begin{align}
+IF&=e^{\int P\brak{x}dx}\\
+IF&=e^{\int -1dx}\\
+&=e^{-x+c}
+\end{align}
+solve for y
+\begin{align}
+y\brak{IF}&=\int {Q\brak{x}\brak{IF}dx}+c\\
+\implies y\brak{e^{-x+c}}&=\int {cos\brak{x}e^{-x+c}dx}+c\\
+y\brak{e^{-x}}&=\int {cos\brak{x}e^{-x}dx}+c
+\end{align}
+let,
+\begin{align}
+J&=\int {cos\brak{x}e^{-x}dx}\\
+&=cos\brak{x}\brak{-e^{-x}}+\int {sin\brak{x}\brak{-e^{-x}}}dx+c\\
+J&=cos\brak{x}\brak{-e^{-x}}+sin\brak{x} e^{-x}-\int{cos\brak{x}e^{-x}dx}+c\\
+ 2J&=sin\brak{x} e^{-x}-cos\brak{x}e^{-x}+c\\
+ J&=\frac{sin\brak{x} e^{-x}-cos\brak{x}e^{-x}}{2}+c
+\end{align}
+So,
+\begin{align}
+y\brak{e^{-x}}&=\frac{sin\brak{x} e^{-x}-cos\brak{x}e^{-x}}{2}+c\\
+y&=\frac{sin\brak{x} e^{-x}-cos\brak{x}e^{-x}}{2}+c\\
+&=\frac{sin\brak{x}-cos\brak{x}}{2}+ce^{x}
+\end{align}
+option A is correct
+\end{document}
