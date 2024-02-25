@@ -61,38 +61,35 @@ Question: Solution of the differential equation $\frac{dy}{dx}-y=cos\brak{x}$ is
 \brak{C}\quad y&=\frac{sin\brak{x}+cos\brak{x}}{2}+ce^{-x}\\
 \brak{D}\quad y&=\frac{sin\brak{x}-cos\brak{x}}{2}+ce^{-x}
 \end{align}
-Solution: \begin{align}\frac{dy}{dx}-y=cos\brak{x}
+Solution:\begin{align}
+\frac{dy}{dx}-y&=cos\brak{x}
 \end{align}
-compare with,
+Apply laplace transform
 \begin{align}
-\frac{dy}{dx}+P\brak{x}y&=Q\brak{x}\\
-\implies -1&=P\brak{x}\\
-\implies cos\brak{x}&=Q\brak{x}
+\mathcal{L}\brak{\frac{dy}{dx}}-\mathcal{L}\brak{y}&=\mathcal{L}\brak{{cos\brak{x}}}
 \end{align}
-integrating factor=
+\begin{table}[!ht]
+ \centering
+  \input{tables\table1.tex}
+   \caption{transformation}
+   \end{table}
 \begin{align}
-IF&=e^{\int P\brak{x}dx}\\
-IF&=e^{\int -1dx}\\
-&=e^{-x+c}
+\implies sY\brak{s}-y\brak{0}-Y\brak{s}&=\frac{s}{s^{2}+1}\\
+Y\brak{s}\brak{s-1}&=y\brak{0}+\frac{s}{s^{2}+1}\\
+Y\brak{s}&=\frac{s+y\brak{0}\brak{s^{2}+1}}{\brak{s-1}\brak{s^{2}+1}}\\
+Y\brak{s}&=\frac{A}{s-1}+\frac{Bs+C}{s^2+1}\\
+A&=y\brak{0},B=\frac{-1}{2},c=\frac{1}{2}\\
+\implies Y\brak{s}&=\frac{y\brak{0}}{s-1}+\frac{-s+1}{2\brak{s^2+1}}
 \end{align}
-solve for y
+apply inverse laplace transform
 \begin{align}
-y\brak{IF}&=\int {Q\brak{x}\brak{IF}dx}+c\\
-\implies y\brak{e^{-x+c}}&=\int {cos\brak{x}e^{-x+c}dx}+c\\
-y\brak{e^{-x}}&=\int {cos\brak{x}e^{-x}dx}+c
+\mathcal{L^-}\brak{Y\brak{s}}&=\mathcal{L^-}\brak{\frac{y\brak{0}}{s-1}}+\mathcal{L^-}\brak{\frac{-s+1}{2\brak{s^2+1}}}\\
+y\brak{x}&=y\brak{0}e^x+\frac{sin\brak{x}-cos\brak{x}}{2}
 \end{align}
-let,
+according to options 
 \begin{align}
-J&=\int {cos\brak{x}e^{-x}dx}\\
-&=cos\brak{x}\brak{-e^{-x}}+\int {sin\brak{x}\brak{-e^{-x}}}dx+c\\
-J&=cos\brak{x}\brak{-e^{-x}}+sin\brak{x} e^{-x}-\int{cos\brak{x}e^{-x}dx}+c\\
- 2J&=sin\brak{x} e^{-x}-cos\brak{x}e^{-x}+c\\
- J&=\frac{sin\brak{x} e^{-x}-cos\brak{x}e^{-x}}{2}+c
+ y\brak{0}&=c\\
+ \implies y&=\frac{sin\brak{x}-cos\brak{x}}{2}+ce^x
 \end{align}
-So,
-\begin{align}
-y\brak{e^{-x}}&=\frac{sin\brak{x} e^{-x}-cos\brak{x}e^{-x}}{2}+c\\
-y&=\frac{sin\brak{x}-cos\brak{x}}{2}+ce^{x}
-\end{align}
-option A is correct
+Option A is correct
 \end{document}
